@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+  <mapper namespace="com.itwillbs.mapper.BoardMapper">
+  
+  <!-- 게시판 번호 구하기 -->
+  <!-- <select id="getBoard_num" resultType="com.itwillbs.domain.BoardVO">
+  	select *(board_num)
+  	from board
+  </select> -->
+  
+  <!-- 게시판 글쓰기 -->
+  	<insert id="writeBoard">
+  		insert into board (board_name, board_subject, board_content)
+  		values(#{board_name}, #{board_subject}, #{board_content})
+  	</insert>
+  	
+  	<!-- 게시판 목록 조회 -->
+  	<select id="getBoardList" resultType="com.itwillbs.domain.BoardVO">
+  		select *
+  		from board
+  	</select>
+  	
+  </mapper>
