@@ -24,7 +24,8 @@ public class BoardController {
 		
 		List<BoardVO> boardList = service.getBoardList();
 		
-		model.addAllAttributes(boardList);
+//		model.addAttribute("boardList",boardList);
+		model.addAttribute(boardList);
 		
 		return "/board/boardList";
 	}
@@ -44,5 +45,14 @@ public class BoardController {
 		
 		return "redirect:/board/boardList";
 	}
+	
+	@RequestMapping(value = "content", method = RequestMethod.GET)
+	public String contentGET(BoardVO vo) {
+		
+		service.getBoardContent(vo);
+		
+		return "/board/content";
+	}
+	
 	
 }

@@ -33,5 +33,13 @@ public class BoardDAOImpl implements BoardDAO {
 		
 		return boardList;
 	}
+
+	@Override
+	public BoardVO getBoardContent(BoardVO vo) {
+		
+		vo = sqlSession.selectOne(NAMESPACE+".getBoardContent");
+		
+		return vo;
+	}
 	
 }

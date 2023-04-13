@@ -24,4 +24,11 @@
   		from board
   	</select>
   	
+  	<!-- 특정 게시글 조회 -->
+  	<select id="getBoardContent" resultType="com.itwillbs.domain.BoardVO">
+  		select board_name, board_subject, board_content
+  		from board
+  		where board_subject = #{board_subject}  	
+  	</select>
+  	
   </mapper>

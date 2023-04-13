@@ -25,4 +25,12 @@ public class BoardServiceImpl implements BoardService {
 		return boardList;
 	}
 
+	@Override
+	public BoardVO getBoardContent(BoardVO vo) {
+
+		vo = bdao.getBoardContent(vo);
+		
+		return vo;
+	}
+
 }

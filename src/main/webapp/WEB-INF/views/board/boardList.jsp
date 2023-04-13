@@ -41,13 +41,16 @@
 <article>
 <h1>Notice</h1>
 <table id="notice">
-	<tr><th class="tno">No.</th>
+	<tr>
 	    <th class="ttitle">Title</th>
+	    <th class="ttitle">Name</th>
 	    <th class="twrite">Writer</th>
 	</tr>
-	<c:forEach var="boardVO" items="${boardVO }">
+	<c:forEach var="boardVO" items="${boardVOList }">
 		<tr>
-			<td>${boardVO.board_subject }</td>
+			<td>
+			<a href="/board/content"> ${boardVO.board_subject }</a>
+			</td>
 			<td>${boardVO.board_name }</td>
 			<td>${boardVO.board_content }</td>
 		</tr>

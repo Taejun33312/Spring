@@ -10,4 +10,6 @@ public interface BoardDAO {
 	public void writeBoard(BoardVO vo);
 	
 	public List<BoardVO> getBoardList();
+	
+	public BoardVO getBoardContent(BoardVO vo);
 }
